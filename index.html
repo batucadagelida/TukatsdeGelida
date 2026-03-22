@@ -9,7 +9,8 @@
         :root {
             --tukats-green: #d9f13d; 
             --tukats-dark: #000000;
-            --item-size: 11vmin; 
+            /* Mida base augmentada per a millor visibilitat */
+            --item-size: 12.5vmin; 
         }
 
         body {
@@ -112,7 +113,7 @@
         }
 
         @media (min-width: 1024px) {
-            :root { --item-size: 13vmin; }
+            :root { --item-size: 14vmin; }
         }
     </style>
     <script>
@@ -146,8 +147,10 @@
 
     <!-- 1. PANTALLA INICIAL -->
     <div id="screen-splash" class="screen z-50 items-center justify-center">
-        <div class="text-center p-6">
-            <img src="LOGO1.png" alt="Logo TUKATS" class="logo-heartbeat w-64 h-64 md:w-96 md:h-96 cursor-pointer" onclick="showScreen('presentation')">
+        <div class="w-full max-w-sm md:max-w-2xl px-6 text-center">
+            <img src="LOGO1.png" alt="Logo TUKATS" 
+                 class="logo-heartbeat w-64 h-64 md:w-96 md:h-96 cursor-pointer block mx-auto" 
+                 onclick="showScreen('presentation')">
             <p class="mt-12 font-black tracking-[0.3em] uppercase animate-pulse text-sm">Toca el logo per entrar</p>
         </div>
     </div>
@@ -195,7 +198,7 @@
     </div>
 
     <!-- 3. PANTALLA QUI SOM (FORMACIÓ) -->
-    <div id="screen-quisom" class="screen hidden-screen z-30 pt-4 pb-16 px-2 md:px-6" onclick="clearSelection(event)">
+    <div id="screen-quisom" class="screen hidden-screen z-30 pt-4 pb-16 px-0.5 md:px-6" onclick="clearSelection(event)">
         <header class="text-center mb-2 flex justify-between items-center px-4">
             <button onclick="showScreen('presentation')" class="bg-black text-white px-3 py-1 text-xs font-bold rounded uppercase">Tornar</button>
             <h2 class="text-lg md:text-3xl font-black uppercase">FORMACIÓ TUKATS</h2>
